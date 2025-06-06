@@ -10,6 +10,7 @@ const Menu = () => {
       icon: Sparkles,
       color: 'from-pink-500 to-purple-600',
       description: 'Balance perfecto entre luz y oscuridad',
+      image: 'https://source.unsplash.com/800x600/?aurora,night',
       dishes: [
         {
           name: 'Aurora Boreal',
@@ -33,6 +34,7 @@ const Menu = () => {
       icon: Flame,
       color: 'from-red-500 to-orange-600',
       description: 'Intensidad y pasión en cada bocado',
+      image: 'https://source.unsplash.com/800x600/?fire,flames',
       dishes: [
         {
           name: 'Volcán Interior',
@@ -56,6 +58,7 @@ const Menu = () => {
       icon: Snowflake,
       color: 'from-blue-500 to-cyan-600',
       description: 'Serenidad y profundidad oceánica',
+      image: 'https://source.unsplash.com/800x600/?ocean,night',
       dishes: [
         {
           name: 'Abismo Profundo',
@@ -79,6 +82,7 @@ const Menu = () => {
       icon: Leaf,
       color: 'from-green-500 to-emerald-600',
       description: 'Conexión pura con la naturaleza',
+      image: 'https://source.unsplash.com/800x600/?forest,nature',
       dishes: [
         {
           name: 'Raíces Ancestrales',
@@ -143,6 +147,10 @@ const Menu = () => {
             </div>
             <h3 className="text-3xl font-bold mb-2 text-white">{menus[activeMenu].title}</h3>
             <p className="text-gray-400">{menus[activeMenu].description}</p>
+          </div>
+          <div className="relative mb-8 h-64 md:h-80 rounded-3xl overflow-hidden">
+            <img src={menus[activeMenu].image} alt={menus[activeMenu].title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
